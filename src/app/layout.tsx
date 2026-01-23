@@ -13,17 +13,7 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <html lang="pt-BR">
-      <body>
-        <header>
-          <h1>Titulo da Pagina</h1>
-        </header>
-
-        <div className="bg-blue-400">{children}</div>
-
-        <footer>
-          <h1>Este é o rodape da Pagina</h1>
-        </footer>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
