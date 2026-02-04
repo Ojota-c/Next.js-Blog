@@ -2,7 +2,6 @@
   "window.zoomLevel": 0,
   "breadcrumbs.enabled": false,
   "editor.glyphMargin": false,
-  "workbench.activityBar.location": "hidden",
   "files.eol": "\n", // Final de linha sempre será LF
   "workbench.editor.labelFormat": "short",
   "editor.tabSize": 2,
@@ -14,6 +13,11 @@
   "code-runner.executorMap": {
     "typescript": "clear ; npx tsx"
   },
+
+  "tailwindCSS.experimental.classRegex": [
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+
   // :martelo_e_chave: Formatação e Lint
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
