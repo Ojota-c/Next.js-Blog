@@ -14,7 +14,7 @@ export default async function HomePage() {
       <section className='grid grid-cols-1 gap-8 mb-16 sm:grid-cols-2 group'>
         <Link className='w-full h-full overflow-auto rounded-xl' href='#'>
           <Image
-            className='group-hover:scale-105 transition duration-800 '
+            className='w-full h-full object-cover group-hover:scale-105 transition duration-800 '
             src='/images/image01.png'
             width={1200}
             height={720}
@@ -23,11 +23,14 @@ export default async function HomePage() {
           />
         </Link>
         <div className='flex flex-col gap-4'>
-          <time className='text-slate-600 text-sm' dateTime='2025-06-14'>
+          <time
+            className='text-slate-600 block text-sm/tight'
+            dateTime='2025-06-14'
+          >
             14/06/2026 10:00
           </time>
 
-          <h1>
+          <h1 className='text-2xl/tight font-extrabold sm:text-4xl'>
             <Link href='#'>Clique para testar</Link>
           </h1>
 
