@@ -3,8 +3,8 @@ import { SpinLoader } from '../components/SpinLoader';
 import { PostsList } from '../components/PostsList';
 import { Container } from '../components/Container';
 import { Header } from '../components/Header';
-import Link from 'next/link';
-import Image from 'next/image';
+import { PostHeading } from '../components/PostHeading';
+import { PostCoverImage } from '../components/PostCoverImage';
 
 export default async function HomePage() {
   return (
@@ -12,17 +12,18 @@ export default async function HomePage() {
       <Header />
 
       <section className='grid grid-cols-1 gap-8 mb-16 sm:grid-cols-2 group'>
-        <Link className='w-full h-full overflow-auto rounded-xl' href='#'>
-          <Image
-            className='w-full h-full object-cover group-hover:scale-105 transition duration-800 '
-            src='/images/image01.png'
-            width={1200}
-            height={720}
-            alt='Título do post'
-            priority
-          />
-        </Link>
-        <div className='flex flex-col gap-4'>
+        <PostCoverImage
+          linkProps={{
+            href: '/post/image02.png',
+          }}
+          imageProps={{
+            width: 1200,
+            height: 720,
+            src: '/images/image02.png',
+            alt: 'Imagem de Teste',
+          }}
+        />
+        <div className='flex flex-col gap-4 sm:justify-center'>
           <time
             className='text-slate-600 block text-sm/tight'
             dateTime='2025-06-14'
@@ -30,9 +31,9 @@ export default async function HomePage() {
             14/06/2026 10:00
           </time>
 
-          <h1 className='text-2xl/tight font-extrabold sm:text-4xl'>
-            <Link href='#'>Clique para testar</Link>
-          </h1>
+          <PostHeading as='h1' url='#'>
+            Teste Titulo
+          </PostHeading>
 
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat,
